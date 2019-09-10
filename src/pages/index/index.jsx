@@ -21,7 +21,7 @@ export default class Index extends Component {
     navigationBarTitleText: '首页'
   }
 
-  componentWillMount () { 
+  componentWillMount () {
     const userInfo = getGlobalData('userInfo')
     if (userInfo) {
       this.setState({
@@ -62,7 +62,6 @@ export default class Index extends Component {
   componentDidHide () { }
 
   getUserInfo = (e) => {
-    console.log(e)
     setGlobalData('userInfo', e.detail.userInfo)
     this.setState({
       userInfo: e.detail.userInfo,

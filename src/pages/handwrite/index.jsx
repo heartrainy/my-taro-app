@@ -427,13 +427,18 @@ export default class HandWrite extends Component {
     this.state.ctx.draw()
   }
 
-  // 保存
-  saveDraw = () => {
+  // 预览
+  previewDraw = () => {
     Taro.canvasToTempFilePath({
       canvasId: "handWriting",
       quality: 1,
       success: (res) => {
-        console.log(res.tempFilePath)
+        Taro.saveFile({
+          tempFilePath: res.tempFilePath,
+          success: (path) => {
+            console.log(path)
+          }
+        })
       }
     })
   }
@@ -449,16 +454,16 @@ export default class HandWrite extends Component {
           <Image onClick={this.selectColorEvent} src={ selectColor === 'red' ? redActive : red } class="{{ selectColor === 'red' ? 'color_select' : '' }} red-select" data-color="red"
             data-color-value="#ca262a"></Image>
           <Button onClick={this.retDraw} className="delBtn">重写</Button>
-          <Button onClick={this.saveDraw} className="saveBtn">保存</Button>
+          <Button onClick={this.previewDraw} className="previewBtn">预览</Button>
         </View>
         <View className="handCenter">
-          <Canvas 
-            className="handWriting" 
-            disableScroll="true" 
-            onTouchStart={this.uploadScaleStart} 
+          <Canvas
+            className="handWriting"
+            disableScroll="true"
+            onTouchStart={this.uploadScaleStart}
             onTouchMove={this.uploadScaleMove}
             onTouchEnd={this.uploadScaleEnd}
-            // onClick="mouseDown" 
+            // onClick="mouseDown"
             canvasId="handWriting"
           >
           </Canvas>
