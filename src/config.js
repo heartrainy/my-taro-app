@@ -1,0 +1,1 @@
+export const REQUEST_IP = 'http://47.103.50.109:9049'

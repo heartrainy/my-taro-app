@@ -1,5 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { set as setGlobalData, get as getGlobalData } from './global_data'
+import { REQUEST_IP } from './config'
 import Index from './pages/index'
 
 import './app.scss'
@@ -24,7 +25,7 @@ class App extends Component {
         console.log(res)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         Taro.request({
-          url: 'http://47.103.50.109:9049/party/wxapp/login',
+          url: `${REQUEST_IP}/party/wxapp/login`,
           method: 'POST',
           header: {
             'content-type': 'application/x-www-form-urlencoded'
@@ -33,7 +34,8 @@ class App extends Component {
             jsCode: res.code
           }
         }).then(function (data) {
-          console.log(data)
+          const response = data.data;
+          console.log(response)
         })
       }
     })
