@@ -13,12 +13,8 @@ export default class Index extends Component {
     this.state = {
       userInfo: {},
       hasUserInfo: false,
-      canIUse: wx.canIUse('button.open-type.getUserInfo')
+      canIUse: Taro.canIUse('button.open-type.getUserInfo')
     }
-  }
-
-  config = {
-    navigationBarTitleText: '首页'
   }
 
   componentWillMount () {
@@ -60,6 +56,10 @@ export default class Index extends Component {
   componentDidShow () { }
 
   componentDidHide () { }
+
+  config = {
+    navigationBarTitleText: '首页'
+  }
 
   getUserInfo = (e) => {
     setGlobalData('userInfo', e.detail.userInfo)

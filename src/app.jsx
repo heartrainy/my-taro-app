@@ -21,8 +21,20 @@ class App extends Component {
     // 登录
     Taro.login({
       success: res => {
-        // console.log(res)
+        console.log(res)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        Taro.request({
+          url: 'http://47.103.50.109:9049/party/wxapp/login',
+          method: 'POST',
+          header: {
+            'content-type': 'application/x-www-form-urlencoded'
+          },
+          data: {
+            jsCode: res.code
+          }
+        }).then(function (data) {
+          console.log(data)
+        })
       }
     })
 
@@ -77,35 +89,35 @@ class App extends Component {
     tabBar: {
       list: [
         {
-          pagePath: 'pages/index/index',
-          text: '首页',
-          iconPath: './assets/tabbar_icon01.png',
-          selectedIconPath: './assets/tabbar_icon01_active.png',
+          "pagePath": "pages/index/index",
+          "iconPath": "images/nav/home-off.png",
+          "selectedIconPath": "images/nav/home-on.png",
+          "text": "首页"
         },
         {
-          pagePath: 'pages/category/index',
-          text: '分类',
-          iconPath: './assets/tabbar_icon02.png',
-          selectedIconPath: './assets/tabbar_icon02_active.png',
+          "pagePath": "pages/handwrite/index",
+          "iconPath": "images/nav/menu-off.png",
+          "selectedIconPath": "images/nav/menu-on.png",
+          "text": "分类"
         },
-        {
-          pagePath: 'pages/cart/index',
-          text: '购物车',
-          iconPath: './assets/tabbar_icon03.png',
-          selectedIconPath: './assets/tabbar_icon03_active.png',
-        },
-        {
-          pagePath: 'pages/user/index',
-          text: '我的',
-          iconPath: './assets/tabbar_icon04.png',
-          selectedIconPath: './assets/tabbar_icon04_active.png',
-        },
+        // {
+        //   // "pagePath": "pages/cart/cart",
+        //   "iconPath": "images/nav/cart-off.png",
+        //   "selectedIconPath": "images/nav/cart-on.png",
+        //   "text": "购物车"
+        // },
+        // {
+        //   // "pagePath": "pages/my/my",
+        //   "iconPath": "images/nav/my-off.png",
+        //   "selectedIconPath": "images/nav/my-on.png",
+        //   "text": "我的"
+        // }
       ],
       color: '#999',
       selectedColor: '#e80e27',
       backgroundColor: '#fff',
       borderStyle: 'black',
-    },
+    }
   }
 
   // 在 App 类中的 render() 函数没有实际作用
