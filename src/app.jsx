@@ -81,6 +81,7 @@ class App extends Component {
       'pages/index/index',
       'pages/handwrite/index',
       'pages/preview/index',
+      'pages/maintain/index',
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -97,10 +98,10 @@ class App extends Component {
           "text": "首页"
         },
         {
-          "pagePath": "pages/handwrite/index",
+          "pagePath": "pages/maintain/index",
           "iconPath": "images/nav/menu-off.png",
           "selectedIconPath": "images/nav/menu-on.png",
-          "text": "分类"
+          "text": "保养"
         },
         // {
         //   // "pagePath": "pages/cart/cart",
