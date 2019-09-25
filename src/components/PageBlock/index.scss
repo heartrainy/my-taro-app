@@ -1,0 +1,61 @@
+@import "~taro-ui/dist/style/components/icon.scss";
+
+.title {
+  position: relative;
+  line-height: 76px;
+  width: 100%;
+  .title-text {
+    font-size: 28px;
+  }
+  .title-icon {
+    padding: 0 15px;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    font-size: 40px;
+    color: #58b0fd;
+  }
+}
+
+.content {
+  display: flex; 
+  flex-direction:row;
+  .flex-item {
+    position: relative;
+    text-align: center;
+    width: 25%; 
+    height: 190px;
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    &:first-child {
+      border-left: none;
+    }
+    .icon-bg {
+      position: relative;
+      margin: 0 auto;
+      margin-top: 44px;
+      width: 76px;
+      height: 76px;
+      background: #58b0fd;
+      border-radius: 10px;
+    }
+    .icon-text {
+      margin-top: 12px;
+      font-size: 28px;
+    }
+    .icon-tip-num {
+      position: absolute;
+      right: -20px;
+      top: -20px;
+      width: 40px;
+      height: 40px;
+      line-height: 38px;
+      border-radius: 50%;
+      background: #ff6d6d;
+      color: #fff;
+      font-size: 21px;
+      text-align: center;
+    }
+  }
+}
