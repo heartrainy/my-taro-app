@@ -11,6 +11,17 @@ export default class Index extends Component {
   constructor (props) {
     super(props)
     this.state = {
+      menuList: [{
+        title: '保养',
+        icon: 'setting',
+        item: [
+          {
+            name: '待保养',
+            icon: 'block',
+            tipNum: 0
+          }
+        ]
+      }]
     }
   }
 
@@ -46,7 +57,13 @@ export default class Index extends Component {
 
     return (
       <View className='index'>
-        <PageBlock title='保养'></PageBlock>
+        {
+          this.state.menuList.map(menu => {
+            return (
+              <PageBlock title='保养'></PageBlock>
+            )
+          })
+        }
       </View>
     )
   }
