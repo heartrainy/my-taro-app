@@ -32,7 +32,7 @@ export default class PageBlock extends Component {
   }
 
   render () {
-    const menuItem = this.props.item.slice();
+    const menuItem = this.props.item ? this.props.item.slice() : [];
     const menuLength = menuItem.length;
     if (menuLength < 4) {
       for (let i = 0; i < (this.state.itemNum - menuLength); i++) {
