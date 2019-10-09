@@ -84,17 +84,40 @@ class App extends Component {
       'pages/maintain/report/index',          // 保养报告书
       'pages/repair/applyList/index',         // 维修申请列表
       'pages/repair/apply/index',             // 维修申请
-      'pages/repair/detail/index',            // 维修申请详情
+      'pages/repair/applyDetail/index',       // 维修申请详情
       'pages/accessory/receiveList/index',    // 配件领取列表
       'pages/accessory/receive/index',        // 领取配件
       'pages/accessory/photograph/index',     // 拍照申请
       'pages/accessory/purchaseApply/index',  // 商城采购申请
       'pages/accessory/purchase/index',       // 配件商城采购
+      'pages/repair/missionList/index',       // 维修任务列表
+      'pages/repair/workOrder/index',         // 维修工单
+      'pages/accessory/detail/index',         // 配件详情
+      'pages/repair/report/index',            // 维修报告书
+      'pages/selfTest/list/index',            // 自检任务列表
+      'pages/selfTest/workOrder/index',       // 自检工单
+      'pages/selfTest/report/index',          // 自检报告
+      'pages/shopping/index',                 // 商城首页
+      'pages/maintain/inventoryList/index',   // 保养清单列表
+      'pages/maintain/inventoryDetail/index', // 保养清单详情
+      'pages/mine/address/list/index',        // 我的收获地址
+      'pages/mine/pickApplyList/index',       // 领料申请列表
+      'pages/mine/purchaseApplyList/index',   // 采购申请列表
+      'pages/mine/purchaseSign/index',        // 采购签收
+      'pages/mine/personalInfo/index',        // 个人信息
+      'pages/mine/certificate/index',         // 证书
+      'pages/mine/messageNotice/index',       // 消息通知
+      'pages/mine/messageDetail/index',       // 消息详情
+      'pages/mine/problemFeedback/index',     // 问题反馈
+      'pages/mine/problemDetail/index',       // 问题详情
+      'pages/mine/problemAdd/index',          // 新增问题
+      'pages/mine/tenement/index',            // 物业联系人
+      'pages/mine/malfunctionCode/index',     // 故障代码
+      'pages/mine/malfunctionDetail/index',   // 故障代码详情
       'pages/index/index',
       'pages/pageList/index',
       'pages/handwrite/index',
       'pages/preview/index',
-      'pages/shopping/index',
       'pages/mine/index',
     ],
     window: {
