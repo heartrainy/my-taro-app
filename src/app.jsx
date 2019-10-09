@@ -78,9 +78,18 @@ class App extends Component {
 
   config = {
     pages: [
-      'pages/maintain/index',
-      'pages/maintain/missionList/index',
-      'pages/maintain/workOrder/index',
+      'pages/maintain/index',                 // 保养主页
+      'pages/maintain/missionList/index',     // 保养任务列表
+      'pages/maintain/workOrder/index',       // 保养工单
+      'pages/maintain/report/index',          // 保养报告书
+      'pages/repair/applyList/index',         // 维修申请列表
+      'pages/repair/apply/index',             // 维修申请
+      'pages/repair/detail/index',            // 维修申请详情
+      'pages/accessory/receiveList/index',    // 配件领取列表
+      'pages/accessory/receive/index',        // 领取配件
+      'pages/accessory/photograph/index',     // 拍照申请
+      'pages/accessory/purchaseApply/index',  // 商城采购申请
+      'pages/accessory/purchase/index',       // 配件商城采购
       'pages/index/index',
       'pages/pageList/index',
       'pages/handwrite/index',
