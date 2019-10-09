@@ -78,10 +78,15 @@ class App extends Component {
 
   config = {
     pages: [
+      'pages/maintain/index',
+      'pages/maintain/missionList/index',
+      'pages/maintain/workOrder/index',
       'pages/index/index',
+      'pages/pageList/index',
       'pages/handwrite/index',
       'pages/preview/index',
-      'pages/maintain/index',
+      'pages/shopping/index',
+      'pages/mine/index',
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -92,29 +97,29 @@ class App extends Component {
     tabBar: {
       list: [
         {
-          "pagePath": "pages/index/index",
+          "pagePath": "pages/maintain/index",
           "iconPath": "images/nav/home-off.png",
           "selectedIconPath": "images/nav/home-on.png",
           "text": "首页"
         },
         {
-          "pagePath": "pages/maintain/index",
+          "pagePath": "pages/pageList/index",
           "iconPath": "images/nav/menu-off.png",
           "selectedIconPath": "images/nav/menu-on.png",
-          "text": "保养"
+          "text": "列表"
         },
-        // {
-        //   // "pagePath": "pages/cart/cart",
-        //   "iconPath": "images/nav/cart-off.png",
-        //   "selectedIconPath": "images/nav/cart-on.png",
-        //   "text": "购物车"
-        // },
-        // {
-        //   // "pagePath": "pages/my/my",
-        //   "iconPath": "images/nav/my-off.png",
-        //   "selectedIconPath": "images/nav/my-on.png",
-        //   "text": "我的"
-        // }
+        {
+          "pagePath": "pages/shopping/index",
+          "iconPath": "images/nav/cart-off.png",
+          "selectedIconPath": "images/nav/cart-on.png",
+          "text": "商城"
+        },
+        {
+          "pagePath": "pages/mine/index",
+          "iconPath": "images/nav/my-off.png",
+          "selectedIconPath": "images/nav/my-on.png",
+          "text": "我的"
+        }
       ],
       color: '#999',
       selectedColor: '#e80e27',

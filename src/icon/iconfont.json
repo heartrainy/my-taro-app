@@ -1,0 +1,23 @@
+{
+  "id": "1449068",
+  "name": "wbicon",
+  "font_family": "iconfont",
+  "css_prefix_text": "wbicon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5530806",
+      "name": "等待",
+      "font_class": "dengdai",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "8192532",
+      "name": "保养",
+      "font_class": "baoyang",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    }
+  ]
+}

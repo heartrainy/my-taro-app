@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Icon, Text, Image } from '@tarojs/components'
 // import { AtIcon } from 'taro-ui'
-
+import '../../icon/iconfont.css'
 import './index.scss'
 
 export default class PageBlock extends Component {
@@ -25,6 +25,12 @@ export default class PageBlock extends Component {
 
   componentDidHide () { }
 
+  handleClick = (url) => {
+    Taro.navigateTo({
+      url: url
+    })
+  }
+
   render () {
     const menuItem = this.props.item.slice();
     const menuLength = menuItem.length;
@@ -37,7 +43,7 @@ export default class PageBlock extends Component {
     return (
       <View>
         <View className='title'>
-          <View className={`title-icon at-icon at-icon-${this.props.icon}`}></View>
+          <View className={`title-icon iconfont wbicon-${this.props.icon}`}></View>
           <Text className='title-text'>{this.props.title}</Text>
         </View>
         <View className='content'>
@@ -48,9 +54,14 @@ export default class PageBlock extends Component {
                 <View className='flex-item' key={`item_key_${index}`}></View>
               ) :
               (
-                <View className='flex-item' key={`item_key_${index}`}>
+                <View onClick={() => this.handleClick(item.url)} className='flex-item' key={`item_key_${index}`}>
                   <View className='icon-bg'>
-                    <View className='icon-tip-num'>{item.tipNum}</View>
+                    <View className={`bg-icon iconfont wbicon-${item.icon}`}></View>
+                    {
+                      item.tipNum && item.tipNum !== 0 ?
+                      <View className='icon-tip-num'>{item.tipNum}</View>
+                      : ''
+                    }
                   </View>
                   <View className='icon-text'>{item.name}</View>
                 </View>
